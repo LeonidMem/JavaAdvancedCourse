@@ -16,7 +16,10 @@ public class SomeBeanClass {
      * @return null if method is void, otherwise result of this method
      */
     public Object callMethod(String methodName, Map<String, Object> arguments) {
-        // Get method
+        // Get method through iterating over all methods and choose any method with
+        // name from the argument even there are more than 1 method with such name
+        // 
+        // If such method wasn't found, just throw IllegalArgumentException
         Method method;
 
         Object[] args = new Object[method.getParameterCount()];
